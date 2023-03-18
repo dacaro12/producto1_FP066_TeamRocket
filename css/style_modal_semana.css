@@ -10,6 +10,7 @@ h1{
     font-size: 24pt;
 }
 
+
 form{
     background-color: #40798C;
     color: #FFFFFF;
@@ -18,7 +19,7 @@ form{
     padding: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14pt;
-    margin-left: 200px;
+    margin-left: 180px;
 }
 
 button{
