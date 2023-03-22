@@ -27,11 +27,8 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../html/main_dashboard.html">Inicio</a>
                 </li>
-            <!--<li class="nav-item">
-              <a class="nav-link" href="../html/modal_nueva_semana.html" data-toggle="modal" data-target="#mi-modal">Añadir semana</a>
-            </li>QUITARLO NO SE PUEDE CREAR MODAL-->
                 <li class="nav-item">
-                  <a class="nav-link" href="../html/tareas_semanales.html">Mi calendario</a>
+                  <a class="nav-link" href="../html/tareas_semanales.html">Mi Calendario</a>
                 </li>
               </ul>
             </div>
@@ -40,8 +37,8 @@
     </div>
     <!-- Botón que activa el modal -->
     <div class="barra">
-      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-formulario">
-      Abrir modal
+      <button type="button" class="btn btn-primary custom-btn" data-toggle="modal" data-target="#modal-formulario">
+      Añadir Semana
       </button>
     </div>
       <!-- Modal -->
@@ -84,7 +81,7 @@
                     <option value="#D3F8E2">Verde</option>
                     <option value="#A9DEF9">Azul</option>
                     <option value="#E4C1F9">Morado</option>
-                    <option value="#EDE7B1">Amarillo</option>
+                    <option value="#68cabb">Turquesa</option>
                     <option value="#F694C1">Rosa</option>
                   </select>
                 </div>
@@ -93,7 +90,7 @@
             <div class="error-message" style="display: none;">Por favor rellene todos los campos.</div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary" onclick="crearCard()">Aceptar</button>
+              <button type="button" class="btn btn-primary" onclick="crearCard(); ">Aceptar</button>
             </div>
           </div>
         </div>
@@ -111,8 +108,17 @@
       <!--para añadir las tarjetas y el script de enlace a crear_semana.js-->
       <div class="fondocontainer">
         <div class="container" id="contenedor-cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
         <script src="../js/crear_semana.js"></script>
+        </div>
       </div>
-    </div>
   </body>
 </html>
