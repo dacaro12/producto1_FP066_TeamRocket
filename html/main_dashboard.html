@@ -31,7 +31,7 @@
               <a class="nav-link" href="../html/modal_nueva_semana.html" data-toggle="modal" data-target="#mi-modal">Añadir semana</a>
             </li>QUITARLO NO SE PUEDE CREAR MODAL-->
                 <li class="nav-item">
-                  <a class="nav-link" href="../html/tareas_semanales.html">Ver tareas</a>
+                  <a class="nav-link" href="../html/tareas_semanales.html">Mi calendario</a>
                 </li>
               </ul>
             </div>
@@ -40,7 +40,7 @@
     </div>
     <!-- Botón que activa el modal -->
     <div class="barra">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-formulario">
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-formulario">
       Abrir modal
       </button>
     </div>
@@ -56,7 +56,7 @@
             </div>
             <div class="modal-body">
               <!-- Formulario -->
-              <form>
+              <form id="formulario">
                 <div class="form-group">
                   <label for="semana-input">Número de semana:</label>
                   <input type="number" class="form-control" id="semana-input" required>
@@ -109,8 +109,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
       <!--para añadir las tarjetas y el script de enlace a crear_semana.js-->
+      <div class="fondocontainer">
         <div class="container" id="contenedor-cards">
         <script src="../js/crear_semana.js"></script>
       </div>
+    </div>
   </body>
 </html>
