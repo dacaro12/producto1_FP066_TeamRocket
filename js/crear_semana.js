@@ -20,6 +20,10 @@ function crearCard() {
         return; // salimos de la función si algún campo requerido está vacío
     }
 
+    let fondo = document.createElement("div");
+    fondo.className = "fondo";
+    fondo.style.backgroundColor = "#F6F1D1";
+
     // Crear el elemento card
     let card = document.createElement("div");
     card.className = "card";
@@ -50,6 +54,7 @@ function crearCard() {
     button2.setAttribute("data-target", "#editar-modal"); // Agregar el atributo data-target con el ID del modal deseado PENDIENTE DE HACER
     
     // Añadir el contenido a la card
+
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText);
     cardFooter.appendChild(cardFooterText);
@@ -57,7 +62,7 @@ function crearCard() {
     cardFooter.appendChild(button2);
     card.appendChild(cardBody);
     card.appendChild(cardFooter);
-
+    fondo.appendChild(card);
   
     // Añadir la card al contenedor
     let contenedor = document.getElementById("contenedor-cards");
