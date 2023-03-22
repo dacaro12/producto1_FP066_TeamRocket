@@ -73,5 +73,5 @@ function crearCard() {
     $(modal).modal('hide');
   
     // Resetear el formulario
-    document.getElementById("formulario-semana").reset();
+    document.getElementById("formulario").reset();
 }
