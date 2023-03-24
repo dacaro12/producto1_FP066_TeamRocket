@@ -29,6 +29,7 @@ let card = document.createElement("div");
 card.className = "card";
 card.style.backgroundColor = color;
 
+
 // Crear el contenido de la card
 let cardBody = document.createElement("div");
 cardBody.className = "card-body";
