@@ -14,7 +14,7 @@ function crearCard() {
     let mes = document.getElementById("mes-input").value;
     let horas = document.getElementById("horas-input").value;
     let color = document.getElementById("color-select").value;
-  
+
     // Verificar que todos los campos requeridos tengan valor
     if (!semana || !anio || !descripcion || !mes || !horas || !color) {
         return; // salimos de la función si algún campo requerido está vacío
@@ -28,7 +28,7 @@ function crearCard() {
     let card = document.createElement("div");
     card.className = "card";
     card.style.backgroundColor = color;
-  
+
     // Crear el contenido de la card
     let cardBody = document.createElement("div");
     cardBody.className = "card-body";
@@ -63,15 +63,15 @@ function crearCard() {
     card.appendChild(cardBody);
     card.appendChild(cardFooter);
     fondo.appendChild(card);
-  
+
     // Añadir la card al contenedor
     let contenedor = document.getElementById("contenedor-cards");
     contenedor.appendChild(card);
-  
+
     // Cerrar el modal
     let modal = document.getElementById("anadir-semana");
     $(modal).modal('hide');
-  
+
     // Resetear el formulario
     document.getElementById("formulario").reset();
 }
