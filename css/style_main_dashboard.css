@@ -75,3 +75,27 @@ html{
   margin-left: 10px;
 }
 
+.modal-content {
+  background-color: #40798C !important;
+  color: #FFFFFF !important;
+}
+.modal-title {
+  font-size: 18pt !important;
+  color: #FFFFFF !important;
+}
+
+#aceptar-btn{
+  background-color: #70A9A1 !important;
+  color: #FFFFFF !important;
+}
+#cancelar-btn{
+  background-color: #CFD7C7 !important ;
+  color: #000000 !important;
+}
+.btn-danger{
+  background-color: #E40066 !important;
+}
+#cancelar-eliminar{
+  background-color: #CFD7C7 !important ;
+  color: #000000 !important;
+}

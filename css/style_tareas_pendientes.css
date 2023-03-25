@@ -2,40 +2,48 @@ html{
     background-color: #F6F1D1;
 }
 
-nav{
+.navegador nav {
     background-color: #40798C;
     text-align: center;
     padding: 0.5rem 1rem;
-}
+  }
+  
 .navbar-brand, .navbar-nav .nav-link {
-    color: #FFFF;
-}
+    color: #fffF;
+  }
+  
 .navbar-brand:hover, .navbar-nav .nav-link:hover {
     color: #0B2027;
-}
-.navbar-brand{
-    padding-left: 25px;
+  }
+  a.navbar-brand {
     font-size: 22pt;
 }
-.navbar-nav{
+  
+.navbar-brand {
+    padding-left: 25px;
+    font-size: 22pt;
+  }
+  
+.navbar-nav {
     margin-left: auto;
     padding-right: 25px;
-    font-size: 18pt;
-}
+    font-size: 16pt;
+  }
+  
+  
 .navbar-brand img {
-    margin-right: 15px;
-}
-.modal {
-    display: none; /* Ocultar el modal por defecto */
-    position: fixed; /* Posición fija para que se mantenga en el centro de la pantalla */
-    z-index: 1; /* Para asegurarnos de que el modal esté encima de todo */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Agregar desplazamiento si el contenido es demasiado grande */
-    background-color: rgba(0,0,0,0.4); /* Fondo oscuro para destacar el modal */
-}
+    margin-right: 10px;
+  }
+
+.modal-content {
+    background-color: #40798C !important;
+    color: #FFFFFF !important;
+  }
+.modal-title {
+    font-size: 18pt !important;
+    color: #FFFFFF !important;
+  }
+
 .custom-btn {
     background-color: #70A9A1 !important;
     color: #000000 !important;
@@ -52,36 +60,52 @@ nav{
     border-color: #40798C !important;
 }
 
-.barra{
-margin: 0%;
+.d-flex{
     background-color: #F6F1D1;
 }
 
-.fondocontainer{
-    background-color: #F6F1D1;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-table{
-    border: black;
-    border-collapse: collapse;
-    }
-/* td, th {
-    border: 2px solid black;
-} */
-.table-bordered {
-    border: 1px solid black;
-    text-align: center;
+.container-fluid {
+    margin: 0%;
+    background-color: #CFD7C7;
+    padding: 20px;
   }
-.columna {
-    height: 50px;
-}
+  
+  .col {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #777;
+  }
+  .semana > .dia-semana {
+    background-color: #CFD7C7;
+  }
+  .dia-semana {
+    width: 14.28%;
+    float: left;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  
+  .btn {
+    background-color: transparent;
+    border: 1px solid #777;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #777;
+    color: #fff;
+  }
+  
+  
+  
+    
 
 
-/* #miBoton {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-} */
+
+
+

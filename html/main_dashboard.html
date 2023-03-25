@@ -89,8 +89,8 @@
             </div>
             <div class="error-message" style="display: none;">Por favor rellene todos los campos.</div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary" onclick="crearCard(); ">Aceptar</button>
+              <button type="button" id="cancelar-btn" class="btn btn-secondary modal-btn" data-dismiss="modal">Cancelar</button>
+              <button type="button" id="aceptar-btn" class="btn btn-primary modal-btn" onclick="crearCard(); ">Aceptar</button>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@
               <p>¿Quieres eliminar el elemento?</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" id = "cancelar-eliminar" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
               <button type="button" class="btn btn-danger">Eliminar</button>
             </div>
           </div>
