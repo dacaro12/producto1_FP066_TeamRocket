@@ -37,45 +37,15 @@ a.navbar-brand {
     margin-right: 10px;
 }
 
-.custom-btn {
-    background-color: #70A9A1 !important;
-    color: #000000 !important;
-    border-color: #70A9A1 !important;
-    font-size: 14pt !important;
-    padding: 10px 30px !important;
-    margin-top: 30px;
-    margin-left: 50px;
-}
-
-.custom-btn:hover {
-    background-color: #40798C !important;
-    color: #FFFFFF !important;
-    border-color: #40798C !important;
-}
-
 .barra {
     margin: 0%;
     background-color: #F6F1D1;
-}
-
-.fondocontainer {
-    background-color: #F6F1D1;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 .imagen1{
     background-color: #000000;
 }
 
-.boton_prev{
-    background-color: #000000;
-}
-
-.boton_next{
-    background-color: #000000;
-}
-
-.visually-hidden{
-    background-color: #000000;
+.carousel-inner{
+    background-color: #F6F1D1;
 }
