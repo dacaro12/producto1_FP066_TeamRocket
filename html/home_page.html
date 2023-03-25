@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Home Page</title>
     <link rel="stylesheet" href="..\css\style_home_page.css">
@@ -77,43 +78,46 @@
 
     <!--Carrusel INTENTO 2-->
     <div>
-        
-            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="container">
-            <div class="carousel-item active imagen1">
-                <img src="..\assets\media\istockphoto-800800746-170667a.jpg"  alt="Imagen 1">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-                <div class="carousel-item imagen2">
-                <img src="..\assets\media\istockphoto-800800746-170667a.jpg"  alt="Imagen 2">
+            <div class="carousel-inner">
+                <div class="container">
+                    <div class="carousel-item active imagen1">
+                        <img class="d-block w-100" src="..\assets\media\Foto1.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item imagen2">
+                        <img class="d-block w-100" src="..\assets\media\istockphoto-800800746-170667a.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item imagen3">
+                        <img class="d-block w-100" src="..\assets\media\istockphoto-800800746-170667a.jpg" alt="Imagen 3">
+                    </div>
+                </div>
+                <div class="boton_prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="boton_next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
             </div>
-            <div class="carousel-item imagen3">
-                <img src="..\assets\media\istockphoto-800800746-170667a.jpg"  alt="Imagen 3">
-            </div>
-        </div>
-        <div class="boton_prev">
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        </div>
-        <div class="boton_next">
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
         </div>
     </div>
 
-    <!--Archivo .JS bootstrap-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-    <!--Archivo .JS-->
-    <script src="home_page.js"></script>
+            <!--Archivo .JS bootstrap-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+            <!--Archivo .JS-->
+            <script src="home_page.js"></script>
 
 </body>
+
 </html>
