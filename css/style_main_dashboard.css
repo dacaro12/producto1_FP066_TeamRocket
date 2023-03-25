@@ -61,4 +61,17 @@ html{
     padding-top: 15px;
     padding-bottom: 15px;
 }
+#contenedor-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.card {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+  flex-grow: 1;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 

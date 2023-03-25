@@ -17,7 +17,7 @@
     <div>
       <div class="navegador">
         <nav class="navbar navbar-expand-sm">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="home_page.html">
             <img src="..\assets\media\R-removebg-preview.png" alt="Logo de la página" width="50" height="50"/>Week Planer</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -25,10 +25,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="../html/main_dashboard.html">Inicio</a>
+                  <a class="nav-link" href="home_page.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../html/tareas_semanales.html">Mi Calendario</a>
+                  <a class="nav-link" href="main_dashboard.html">Mi Calendario</a>
                 </li>
               </ul>
             </div>
@@ -109,6 +109,27 @@
       <div class="fondocontainer">
         <div class="container" id="contenedor-cards">
         <script src="../js/crear_semana.js"></script>
+        
+        </div>
+      </div>
+      <!--modal eliminar-->
+      <div class="modal fade" id="eliminar-modal" tabindex="-1" role="dialog" aria-labelledby="eliminar-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="eliminar-modal-label">Necesaria confirmación de eliminación</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>¿Quieres eliminar el elemento?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
         </div>
       </div>
   </body>
