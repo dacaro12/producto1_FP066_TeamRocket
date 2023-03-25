@@ -7,73 +7,74 @@ function crearTarea() {
         return; // salimos de la función si el formulario no es válido
     }
 
-    // Obtener los valores de los inputs
-    let tarea = document.getElementById("tarea-input").value;
-    let inicio = document.getElementById("time-input").value;
-    let final = document.getElementById("time-input").value;
-    let descripcion = document.getElementById("descripcion-input").value;
-    let colaboradores = document.getElementById("colaboradores-input").value;
-    let prioridad = document.getElementById("prioridad-select").value;
 
-// Verificar que todos los campos requeridos tengan valor
-if (!tarea || inicio || !final || !descripcion || !colaboradores || !prioridad) {
-    return; // salimos de la función si algún campo requerido está vacío
-}
+    // Obtener valores de los campos del formulario
+    var nombreTarea = document.getElementById("tarea-input").value;
+    var horaInicio = document.getElementById("time-input").value;
+    var horaFinal = document.getElementById("time-input").value;
+    var descripcion = document.getElementById("descripcion-input").value;
+    var colaboradores = document.getElementById("colaboradores-input").value;
+    var prioridad = document.getElementById("prioridad").value;
 
-let fondo = document.createElement("div");
-    fondo.className = "fondo";
-    fondo.style.backgroundColor = "#F6F1D1";
+    if (!nombreTarea || !horaInicio || !horaFinal || !descripcion || !colaboradores || !prioridad) {
+        return; // salimos de la función si algún campo requerido está vacío
+    }
+    //crear card
+    let card = document.createElement("div");
+    card.className = "card";
+    card.style.backgroundColor = prioridad;
+  
+    // Crear tarjeta con los valores del formulario
+    var contenedor = document.getElementById("container-tareas");
+    var nuevaTarjeta = document.createElement("div");
+    nuevaTarjeta.classList.add("card");
+    nuevaTarjeta.style.backgroundColor = prioridad;
 
-// Crear el elemento card
-let card = document.createElement("div");
-card.className = "card";
-card.style.backgroundColor = color;
+    // Crear la lista de elementos con el mismo color de fondo que la tarjeta
+    var lista = document.createElement("ul");
+    lista.classList.add("list-group", "list-group-flush");
+    lista.style.backgroundColor = prioridad;
 
+    var itemInicio = document.createElement("li");
+    itemInicio.classList.add("list-group-item");
+    itemInicio.innerHTML = `<strong>Inicio:</strong> ${horaInicio}`;
 
-// Crear el contenido de la card
-let cardBody = document.createElement("div");
-cardBody.className = "card-body";
-let cardTitle = document.createElement("h5");
-cardTitle.className = "card-title";
-cardTitle.textContent = "tarea " + tarea + " - " + inicio + final;
-let cardText = document.createElement("p");
-cardText.className = "card-text";
-cardText.textContent = descripcion;
-let cardFooter = document.createElement("div");
-cardFooter.className = "card-footer";
-// let cardFooterText = document.createElement("small");
-// cardFooterText.className = "text-muted";
-// cardFooterText.textContent = mes + " - " + horas + " horas";
-let button1 = document.createElement("button");
-button1.className = "btn btn-primary";
-button1.textContent = "Detalles";
-button1.href = "tareas_pendientes.html"; //agrgar enlace a tareas pendientes
-let button2 = document.createElement("button");
-button2.className = "btn btn-secondary";
-button2.textContent = "Eliminar";
-button2.setAttribute("data-toggle", "modal"); // Agregar el atributo data-toggle
-button2.setAttribute("data-target", "#editar-modal"); // Agregar el atributo data-target con el ID del modal deseado PENDIENTE DE HACER
+    var itemFin = document.createElement("li");
+    itemFin.classList.add("list-group-item");
+    itemFin.innerHTML = `<strong>Fin:</strong> ${horaFinal}`;
 
-// Añadir el contenido a la card
+    var itemColaboradores = document.createElement("li");
+    itemColaboradores.classList.add("list-group-item");
+    itemColaboradores.innerHTML = `<strong>Colaboradores:</strong> ${colaboradores}`;
 
-cardBody.appendChild(cardTitle);
-cardBody.appendChild(cardText);
-cardFooter.appendChild(cardFooterText);
-cardFooter.appendChild(button1);
-cardFooter.appendChild(button2);
-card.appendChild(cardBody);
-card.appendChild(cardFooter);
-fondo.appendChild(card);
+    // Agregar los elementos a la lista
+    lista.appendChild(itemInicio);
+    lista.appendChild(itemFin);
+    lista.appendChild(itemColaboradores);
 
-// Añadir la card al contenedor
-let contenedor = document.getElementById("contenedor-cards");
-contenedor.appendChild(card);
+    // Crear el cuerpo de la tarjeta y agregar la lista
+    var cuerpoTarjeta = document.createElement("div");
+    cuerpoTarjeta.classList.add("card-body");
+    cuerpoTarjeta.innerHTML = `
+    <h6 class="card-title">${nombreTarea}</h6>
+    <p class="card-text">${descripcion}</p>
+    `;
+    cuerpoTarjeta.appendChild(lista);
 
-// Cerrar el modal
-let modal = document.getElementById("anadir-tarea");
-$(modal).modal('hide');
+    // Agregar el cuerpo de la tarjeta a la tarjeta
+    nuevaTarjeta.appendChild(cuerpoTarjeta);
 
-// Resetear el formulario
-document.getElementById("formulario").reset();
-}
+    // Agregar la nueva tarjeta al contenedor
+    contenedor.appendChild(nuevaTarjeta);
 
+    
+    // Agregar la nueva tarjeta al contenedor
+    contenedor.appendChild(nuevaTarjeta);
+  
+    // Cerrar el modal
+    $('#modal-tarea').modal('hide');
+  
+    // Limpiar los campos del formulario
+    document.getElementById("formulario").reset();
+  }
+  

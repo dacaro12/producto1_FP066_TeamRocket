@@ -51,6 +51,7 @@ function crearCard() {
     let button1 = document.createElement("button");
     button1.className = "btn btn-primary btn-sm";
     button1.textContent = "Detalles";
+    button1.style.backgroundColor = "#CFD7C7";
     button1.onclick = function() {
         window.location.href = "../html/tareas_pendientes.html";
     };
@@ -103,6 +104,7 @@ function crearCard() {
     let contenedor = document.getElementById("contenedor-cards");
     contenedor.appendChild(card);
 
+
     /*let columnas = contenedor.querySelectorAll(".col-4");
     let columna = columnas[0];
 
@@ -113,7 +115,6 @@ function crearCard() {
     }
 
 columna.appendChild(card);*/
-
     // Cerrar el modal
     let modal = document.getElementById("anadir-semana");
     $(modal).modal('hide');
