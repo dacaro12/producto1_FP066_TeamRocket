@@ -49,3 +49,7 @@ a.navbar-brand {
 .carousel-inner{
     background-color: #F6F1D1;
 }
+
+#imagen1{
+    object-fit: cover;
+}
