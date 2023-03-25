@@ -30,36 +30,21 @@ function crearTarea() {
     nuevaTarjeta.classList.add("card");
     nuevaTarjeta.style.backgroundColor = prioridad;
 
-    // Crear la lista de elementos con el mismo color de fondo que la tarjeta
-    var lista = document.createElement("ul");
-    lista.classList.add("list-group", "list-group-flush");
-    lista.style.backgroundColor = prioridad;
-
-    var itemInicio = document.createElement("li");
-    itemInicio.classList.add("list-group-item");
-    itemInicio.innerHTML = `<strong>Inicio:</strong> ${horaInicio}`;
-
-    var itemFin = document.createElement("li");
-    itemFin.classList.add("list-group-item");
-    itemFin.innerHTML = `<strong>Fin:</strong> ${horaFinal}`;
-
-    var itemColaboradores = document.createElement("li");
-    itemColaboradores.classList.add("list-group-item");
-    itemColaboradores.innerHTML = `<strong>Colaboradores:</strong> ${colaboradores}`;
-
-    // Agregar los elementos a la lista
-    lista.appendChild(itemInicio);
-    lista.appendChild(itemFin);
-    lista.appendChild(itemColaboradores);
-
-    // Crear el cuerpo de la tarjeta y agregar la lista
+    // Crear el cuerpo de la tarjeta
     var cuerpoTarjeta = document.createElement("div");
     cuerpoTarjeta.classList.add("card-body");
+    cuerpoTarjeta.style.backgroundColor = prioridad;
+
+    // Agregar los elementos al cuerpo de la tarjeta
     cuerpoTarjeta.innerHTML = `
     <h6 class="card-title">${nombreTarea}</h6>
     <p class="card-text">${descripcion}</p>
+    <ul class="list-group list-group-flush" style="background-color:${prioridad};">
+        <li class="list-group-item"><strong>Inicio:</strong> ${horaInicio}</li>
+        <li class="list-group-item"><strong>Fin:</strong> ${horaFinal}</li>
+        <li class="list-group-item"><strong>Colaboradores:</strong> ${colaboradores}</li>
+    </ul>
     `;
-    cuerpoTarjeta.appendChild(lista);
 
     // Agregar el cuerpo de la tarjeta a la tarjeta
     nuevaTarjeta.appendChild(cuerpoTarjeta);
@@ -67,9 +52,6 @@ function crearTarea() {
     // Agregar la nueva tarjeta al contenedor
     contenedor.appendChild(nuevaTarjeta);
 
-    
-    // Agregar la nueva tarjeta al contenedor
-    contenedor.appendChild(nuevaTarjeta);
   
     // Cerrar el modal
     $('#modal-tarea').modal('hide');

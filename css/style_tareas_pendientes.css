@@ -87,7 +87,9 @@ html{
     text-align: center;
     padding: 10px 0;
   }
-  
+  .bg-secundary{
+    background-color: #CFD7C7 !important;
+  }
   
   .btn {
     background-color: transparent;
@@ -100,6 +102,9 @@ html{
     background-color: #777;
     color: #fff;
   }
+
+  
+
   
   
   
