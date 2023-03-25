@@ -70,39 +70,31 @@ html{
     padding: 20px;
   }
   
-  .col {
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #777;
-  }
-  .semana > .dia-semana {
-    background-color: #CFD7C7;
-  }
-  .dia-semana {
-    width: 14.28%;
-    float: left;
-    text-align: center;
-    padding: 10px 0;
-  }
-  .bg-secundary{
-    background-color: #CFD7C7 !important;
-  }
-  
-  .btn {
-    background-color: transparent;
-    border: 1px solid #777;
-    color: #777;
-    margin-top: 5px;
-  }
-  
-  .btn:hover {
-    background-color: #777;
-    color: #fff;
+  .card {
+    max-width: 150px;
+    overflow: auto;
+    flex-grow: 1;
+    margin: 5px;
+    padding: 0px !important;
   }
 
+.card-text {
+    font-size: 12px;
+    margin: 5px;
+    padding: 0px !important;
+
+  }
+  .card-body{
+    margin: 5px;
+    padding: 0px !important;
+
+  }
+  #container-tareas {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start; 
+    overflow-x: auto;
+  }
   
 
   

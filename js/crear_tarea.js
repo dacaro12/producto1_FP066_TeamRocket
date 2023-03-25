@@ -2,8 +2,8 @@ function crearTarea() {
 
     // obtener valores de los inputs del formulario
     const nombre = document.getElementById("tarea-input").value;
-    const horaInicio = document.getElementById("time-input").value;
-    const horaFinal = document.getElementById("time-input").value;
+    const horaInicio = document.getElementById("time-inicio-input").value;
+    const horaFinal = document.getElementById("time-final-input").value;
     const descripcion = document.getElementById("descripcion-input").value;
     const colaboradores = document.getElementById("colaboradores-input").value;
     const prioridad = document.getElementById("prioridad").value;
