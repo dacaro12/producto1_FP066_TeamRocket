@@ -104,17 +104,6 @@ function crearCard() {
     let contenedor = document.getElementById("contenedor-cards");
     contenedor.appendChild(card);
 
-
-    /*let columnas = contenedor.querySelectorAll(".col-4");
-    let columna = columnas[0];
-
-    if (columna.children.length === 5) {
-    columna = columnas[1];
-    } else if (columna.children.length === 6) {
-    columna = columnas[2];
-    }
-
-columna.appendChild(card);*/
     // Cerrar el modal
     let modal = document.getElementById("anadir-semana");
     $(modal).modal('hide');
