@@ -13,14 +13,32 @@ function crearTarea() {
       const errorDiv = document.querySelector(".error-message");
       errorDiv.style.display = "block";
       return;
-    }
+  }
   
-    // crear elemento card
-    const card = document.createElement("div");
-    card.classList.add("card");
+    // Crear el elemento card con un id único
+    let card = document.createElement("div");
+    let cardId = "card-" + Date.now().toString();
+    card.setAttribute("id", cardId);
+    card.className = "card";
     card.style.backgroundColor = prioridad;
-    card.style.width = "200px";
-    card.style.height = "155px";
+    card.style.width = "320px";
+    card.style.height = "250px";
+
+    // Agregar el atributo drag a la card
+    card.addEventListener("dragstart", drag);
+    card.setAttribute("draggable", "true");
+
+    
+
+
+    // const draggables = document.querySelectorAll('.card');
+
+    // crear elemento card
+    // const card = document.createElement("div");
+    // card.classList.add("card");
+    // card.style.backgroundColor = prioridad;
+    // card.style.width = "200px";
+    // card.style.height = "155px";
   
     // crear elemento card-body
     const cardBody = document.createElement("div");
@@ -30,19 +48,19 @@ function crearTarea() {
     const nombreTarea = document.createElement("h5");
     nombreTarea.classList.add("card-title");
     nombreTarea.textContent = nombre;
-  
+
     const horaInicioTarea = document.createElement("p");
     horaInicioTarea.classList.add("card-text");
     horaInicioTarea.textContent = "Hora de inicio: " + horaInicio;
-  
+
     const horaFinalTarea = document.createElement("p");
     horaFinalTarea.classList.add("card-text");
     horaFinalTarea.textContent = "Hora de finalización: " + horaFinal;
-  
+
     const descripcionTarea = document.createElement("p");
     descripcionTarea.classList.add("card-text");
     descripcionTarea.textContent = "Descripción: " + descripcion;
-  
+
     const colaboradoresTarea = document.createElement("p");
     colaboradoresTarea.classList.add("card-text");
     colaboradoresTarea.textContent = "Colaboradores: " + colaboradores;
@@ -53,17 +71,38 @@ function crearTarea() {
     cardBody.appendChild(horaFinalTarea);
     cardBody.appendChild(descripcionTarea);
     cardBody.appendChild(colaboradoresTarea);
-  
     card.appendChild(cardBody);
   
     // añadir card al container de tareas
     const container = document.getElementById("container-tareas");
     container.appendChild(card);
+    container.addEventListener("dragover", allowDrop);
+    container.addEventListener("drop", drop);
+  
   
     // cerrar modal
     $('#modal-tarea').modal('hide');
   
     // limpiar valores del formulario
     document.getElementById("formulario").reset();
-  }
+
+
+
+}
+
+// function allowDrop(event) {
+//   event.preventDefault();
+  
+// }
+
+// function drag(event) {
+//   event.dataTransfer.setData("text", event.target.id);
+// }
+
+// function drop(event) {
+//   event.preventDefault();
+//   var data = event.dataTransfer.getData("text");
+//   event.target.appendChild(document.getElementById(data));
+//   event.target.appendChild(element);
+// }
   
