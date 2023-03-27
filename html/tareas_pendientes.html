@@ -34,7 +34,8 @@
         </nav>
     </div>
     </div>
-    
+
+
     
 <!-- Botón para abrir el modal -->
 <div class="d-flex">
@@ -44,19 +45,76 @@
     </button>
   </div>
   <div class="container" id="container-tareas">
+    
     <script src="../js/crear_tarea.js"></script>
   </div>
 </div>
 <!--contenedor dias de semana-->
-<div class="cont-semana">
-  <div class="column">Lunes</div>
-		<div class="column">Martes</div>
-		<div class="column">Miércoles</div>
-		<div class="column">Jueves</div>
-		<div class="column">Viernes</div>
-		<div class="column">Sábado</div>
-		<div class="column">Domingo</div>
+<div class="contenedor-semana"  ondrop="drop(event)" ondragover="allowDrop(event)">
+  <div class="row justify-content-center">
+    <div class="col d-flex" id="lunes">
+      <div class="card" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <div class="card-header"><strong>Lunes</strong></div>
+        <div class="card-body"> </div>
+      </div>
+    </div>
+    <div class="col d-flex"id="martes">
+      <div class="card" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="card-header"><strong>Martes</strong></div>
+        <div class="card-body"> </div>
+      </div>
+    </div>
+    <div class="col d-flex"id="miercoles">
+      <div class="card" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="card-header"><strong>Miércoles</strong></div>
+        <div class="card-body"> </div>
+      </div>
+    </div>
+    <div class="col d-flex" id="jueves">
+      <div class="card" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="card-header"><strong>Jueves</strong></div>
+        <div class="card-body"> </div>
+      </div>
+    </div>
+    <div class="col d-flex"id="viernes">
+      <div class="card" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="card-header"><strong>Viernes</strong></div>
+        <div class="card-body"> </div>
+      </div>
+    </div>
+    <div class="col d-flex" id="sabado">
+    <div class="card" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="card-header"><strong>Sábado</strong></div>
+        <div class="card-body"> </div>
+      </div>
+    </div>
+    <div class="col d-flex" id="domingo">
+        <div class="card" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="card-header"><strong>Domingo</strong></div>
+        <div class="card-body"> </div>
+      </div>
+    </div>
+  </div>
 </div>
+</div>
+<script>
+  function allowDrop(event) {
+    event.preventDefault();
+    
+  }
+
+  function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+  }
+
+  function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
+    event.target.appendChild(element);
+  }
+</script>
+
 
 <!-- Modal -->
 <div class="modal fade" id="modal-tarea" tabindex="-1" role="dialog" aria-labelledby="modal-tarea-titulo" aria-hidden="true">
@@ -107,6 +165,9 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary" onclick="crearTarea(); ">Aceptar</button>
         </div>
+
+   
+        
     </div>
         <!-- Bootstrap 4 CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -117,6 +178,7 @@
         <!-- Bootstrap 4 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
 
 
 </body>

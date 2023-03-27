@@ -113,8 +113,25 @@ html{
     white-space: nowrap;
   }
 
+  .columnas-semana {
+    max-width: auto;
+    min-height: auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
   
-  
+  .col {
+    flex: 2;
+    width: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+  }
+
+
   
     
 
