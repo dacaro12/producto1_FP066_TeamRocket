@@ -23,27 +23,16 @@ function crearCard() {
     let fondo = document.createElement("div");
     fondo.className = "fondo";
     fondo.style.backgroundColor = "#F6F1D1";
+
     
-    
-    // Crear el elemento card con un id único
+
+
+// Crear el elemento card 
     let card = document.createElement("div");
-    let cardId = "card-" + Date.now().toString();
-    card.setAttribute("id", cardId);
     card.className = "card";
     card.style.backgroundColor = color;
     card.style.width = "320px";
     card.style.height = "250px";
-    card.setAttribute("draggable", true);
-    card.setAttribute("ondragstart", "drag(event)");
-
-
-
-// Crear el elemento card 
-    // let card = document.createElement("div");
-    // card.className = "card";
-    // card.style.backgroundColor = color;
-    // card.style.width = "320px";
-    // card.style.height = "250px";
 
 
     // Crear el contenido de la card
@@ -113,30 +102,16 @@ function crearCard() {
     card.appendChild(cardBody);
     card.appendChild(cardFooter);
     fondo.appendChild(card);
-
+    
+        // Cerrar el modal
+        let modal = document.getElementById("anadir-semana");
+        $(modal).modal('hide');
     // Añadir la card al contenedor
     let contenedor = document.getElementById("contenedor-cards");
     contenedor.appendChild(card);
-
-    // Cerrar el modal
-    let modal = document.getElementById("anadir-semana");
-    $(modal).modal('hide');
-
     // Resetear el formulario
     document.getElementById("formulario").reset();
-
-   //Funciones DRAG/DROP
-    function allowDrop(event) {
-    event.preventDefault();
-    }
-
-    function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
-    }
-
-    function drop(event) {
-    event.preventDefault();
-    var data = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(data));
-} 
 }
+
+
+    

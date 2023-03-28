@@ -63,6 +63,7 @@ html{
 
 .d-flex{
     background-color: #F6F1D1;
+    padding: 0%;
 }
 
 .container-fluid {
@@ -96,6 +97,8 @@ html{
     justify-content: flex-start; 
     overflow-x: auto;
   }
+
+
   
   .cont-semana {
     display: flex;
@@ -103,33 +106,22 @@ html{
     justify-content: space-between;
     background-color: #F6F1D1;
   }
-  .column {
-    flex-basis: 800px;
-    max-height: 800px;
-    background-color: #CFD7C7;
-    padding: 20px;
+  .columna {
+    width: calc(100% / 7);
+    font-size: 16pt;
+    background-color: #70A9A1;
+    vertical-align: top;
+    margin: 0;
+    flex-direction: column;
+    padding: 10px;
     box-sizing: border-box;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .columnas-semana {
-    max-width: auto;
-    min-height: auto;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    align-items: center;
+    border: 3px solid #ccc;
+    min-height: 500px;
+    max-height: 750px; 
+    overflow-y: auto;
+    text-align: center;
   }
   
-  .col {
-    flex: 2;
-    width: 20px;
-    text-align: center;
-    padding: 10px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-  }
 
 
   
