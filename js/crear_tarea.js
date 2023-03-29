@@ -43,11 +43,11 @@ function crearTarea() {
 
     const horaInicioTarea = document.createElement("p");
     horaInicioTarea.classList.add("card-text");
-    horaInicioTarea.textContent = "Hora de inicio: " + horaInicio;
+    horaInicioTarea.textContent = "Hora Inicio: " + horaInicio;
 
     const horaFinalTarea = document.createElement("p");
     horaFinalTarea.classList.add("card-text");
-    horaFinalTarea.textContent = "Hora de finalización: " + horaFinal;
+    horaFinalTarea.textContent = "Hora Final: " + horaFinal;
 
     const descripcionTarea = document.createElement("p");
     descripcionTarea.classList.add("card-text");
