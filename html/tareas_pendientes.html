@@ -5,15 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MainPage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-3+3iqUMgY/iX65zoyNUL2N25AQAgGdN0IZovXTLa6UcvQ6o54Sy6U8d+X9V7JHsn5M5V7q3e6+uPdbzZS6lJWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-0v2aFd6hKM0N2Oo6V8U6d9X7VpJ5l5BBbV3qFg/OFa1ZDXI86ZMqM3q9iMgpb/Hfz2+dDQaJ8Euy1iQUEDszIg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Bootstrap 5.1.3 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 5.1.3 JS, Popper, and Bootstrap 4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="..\css\style_tareas_pendientes.css" />
     </head>
+
+
     <body>
     <div>
+      <!--navegador-->
     <div class="navegador">
         <nav class="navbar navbar-expand-sm">
     <a class="navbar-brand" href="#">
@@ -49,19 +57,42 @@
     <script src="../js/crear_tarea.js"></script>
   </div>
 </div>
-
+<!--columnas semanales-->
 <div class="cont-semana">
-  <div class="columna" id="lunes" ondrop="drop(event)" ondragover="allowDrop(event)">Lunes</div>
-  <div class="columna" id="martes" ondrop="drop(event)" ondragover="allowDrop(event)">Martes</div>
-  <div class="columna" id="miercoles" ondrop="drop(event)" ondragover="allowDrop(event)">Miércoles</div>
-  <div class="columna" id="jueves" ondrop="drop(event)" ondragover="allowDrop(event)">Jueves</div>
-  <div class="columna" id="viernes" ondrop="drop(event)" ondragover="allowDrop(event)">Viernes</div>
-  <div class="columna" id="sabado" ondrop="drop(event)" ondragover="allowDrop(event)">Sábado</div>
-  <div class="columna" id="domingo" ondrop="drop(event)" ondragover="allowDrop(event)">Domingo</div>
+  <div class="columna" id="lunes" ondrop="drop(event)" ondragover="allowDrop(event)">Lunes
+    <button type="button" class="btn-secondary" id="btn-col" data-toggle="modal" data-target="#modal-tarea">+</button>
+  </div>
+  <div class="columna" id="martes" ondrop="drop(event)" ondragover="allowDrop(event)">Martes  
+    <button type="button" class="btn-secondary" id="btn-col" data-toggle="modal" data-target="#modal-tarea">+</button>
+  </div>
+  <div class="columna" id="miercoles" ondrop="drop(event)" ondragover="allowDrop(event)">Miércoles 
+    <button type="button" class="btn-secondary" id="btn-col" data-toggle="modal" data-target="#modal-tarea">+</button>
+  </div>
+  <div class="columna" id="jueves" ondrop="drop(event)" ondragover="allowDrop(event)">Jueves
+    <button type="button" class="btn-secondary" id="btn-col" data-toggle="modal" data-target="#modal-tarea">+</button>
+</div>
+  <div class="columna" id="viernes" ondrop="drop(event)" ondragover="allowDrop(event)">Viernes
+    <button type="button" class="btn-secondary" id="btn-col" data-toggle="modal" data-target="#modal-tarea">+</button>
+</div>
+  <div class="columna" id="sabado" ondrop="drop(event)" ondragover="allowDrop(event)">Sábado
+    <button type="button" class="btn-secondary" id="btn-col" data-toggle="modal" data-target="#modal-tarea">+</button>
+</div>
+  <div class="columna" id="domingo" ondrop="drop(event)" ondragover="allowDrop(event)">Domingo
+    <button type="button" class="btn-secondary" id="btn-col" data-toggle="modal" data-target="#modal-tarea">+</button>
+</div>
 </div>
 <script src="../js/dragdrop.js"></script>
 
+ <!-- Bootstrap 4 CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+ <!-- jQuery -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+ <!-- Bootstrap 4 -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
 
 <!-- Modal -->
 <div class="modal fade" id="modal-tarea" tabindex="-1" role="dialog" aria-labelledby="modal-tarea-titulo" aria-hidden="true">
@@ -77,52 +108,70 @@
 
         <!-- Formulario -->
         <form id="formulario">
-            <div class="form-group">
-              <label for="tarea-input">Nombre Tarea:</label>
-              <input type="text" class="form-control" id="tarea-input" required>
-            </div>
-            <div class="form-group">
-              <label for="time-input">Hora Inicio:</label>
-              <input type="time" class="form-control" id="time-inicio-input" required>
-            </div>
-            <div class="form-group">
-                <label for="time-input">Hora Final:</label>
-                <input type="time" class="form-control" id="time-final-input" required>
-            </div>
-            <div class="form-group">
-                <label for="descripcion-input">Descripción:</label>
-                <textarea class="form-control" id="descripcion-input" rows="3" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="colaboradores-input">Colaboradores:</label>
-                <input type="text" class="form-control" id="colaboradores-input" required>
-            </div> 
-            <div>
+          <div class="form-group">
+            <label for="tarea-input">Nombre Tarea:</label>
+            <input type="text" class="form-control" id="tarea-input" required>
+          </div>
+          <div class="form-group">
+            <label for="time-input">Hora Inicio:</label>
+            <input type="time" class="form-control" id="time-inicio-input" required>
+          </div>
+          <div class="form-group">
+            <label for="time-input">Hora Final:</label>
+            <input type="time" class="form-control" id="time-final-input" required>
+          </div>
+          <div class="form-group">
+            <label for="descripcion-input">Descripción:</label>
+            <textarea class="form-control" id="descripcion-input" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="colaboradores-input">Colaboradores:</label>
+            <input type="text" class="form-control" id="colaboradores-input" required>
+          </div>
+          <div class="form-group">
             <label for="prioridad">Prioridad:</label>
             <select id="prioridad" name="prioridad">
-            <option value="#E40066">Alta</option>
-            <option value="#EAC435">Media</option>
-            <option value="#345995">Baja</option>
+              <option value="#E40066">Alta</option>
+              <option value="#EAC435">Media</option>
+              <option value="#345995">Baja</option>
             </select>
-            </label>
+          </div>
+          <div class="form-group">
+            <label for="contenedor">Contenedor:</label>
+            <select id="contenedor-select" name="contenedor">
+              <option value="container-tareas">Ninguno</option>
+              <optgroup label="Días de la semana">
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miércoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="sabado">Sábado</option>
+                <option value="domingo">Domingo</option>
+              </optgroup>
+            </select>
+          </div>
         </form>
+        
         </div>
         <div class="error-message" style="display: none;">Por favor rellene todos los campos.</div>
         <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" onclick="crearTarea(); ">Aceptar</button>
+        <button type="button" id = "cancelar-btn"class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" id="aceptar-btn" class="btn btn-primary" onclick="crearTarea(); ">Aceptar</button>
         </div>
+
+        <!--modal eliminar tarea-->
         <div class="modal fade" id="eliminar-modal" tabindex="-1" role="dialog" aria-labelledby="eliminar-modal-label" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="eliminar-modal-label">Necesaria confirmación de eliminación</h5>
+                <h5 class="modal-title" id="eliminar-modal-label">Es necesario confirmar la eliminación</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                <p>¿Quieres eliminar el elemento?</p>
+                <p>¿Estás seguro de querer eliminar la tarea?</p>
               </div>
               <div class="modal-footer">
                 <button type="button" id = "cancelar-eliminar" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -132,16 +181,7 @@
           </div>
         </div>
     </div>
-        <!-- Bootstrap 4 CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-        <!-- Bootstrap 4 -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        
+       
 
 
 </body>

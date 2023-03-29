@@ -98,7 +98,19 @@ html{
     overflow-x: auto;
   }
 
-
+  #btn-col{
+    background-color: #70A9A1 !important;
+    color: #000000 !important;
+    border-color: #70A9A1 !important;
+    font-size: 10pt !important;
+    padding: 10px!important;
+    border: #0B2027 solid 2px;
+  }
+  #btn-col:hover {
+    background-color: #40798C !important;
+    color: #FFFFFF !important;
+    border-color: #40798C !important;
+}
   
   .cont-semana {
     display: flex;
@@ -121,7 +133,13 @@ html{
     overflow-y: auto;
     text-align: center;
   }
-  
+  #aceptar-btn{
+    background-color: #70A9A1 !important;
+    color: #FFFFFF !important;
+  }
+  #cancelar-btn{
+    background-color: #CFD7C7 !important ;
+    color: #000000 !important;}
 
 
   

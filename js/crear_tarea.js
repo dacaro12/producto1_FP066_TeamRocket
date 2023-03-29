@@ -7,6 +7,9 @@ function crearTarea() {
     const descripcion = document.getElementById("descripcion-input").value;
     const colaboradores = document.getElementById("colaboradores-input").value;
     const prioridad = document.getElementById("prioridad").value;
+    const contenedorSelect = document.getElementById("contenedor-select");
+    const contenedorSeleccionado = contenedorSelect.value;
+
 
   
     // validar que se hayan llenado todos los campos
@@ -23,7 +26,7 @@ function crearTarea() {
     card.className = "card";
     card.style.backgroundColor = prioridad;
     card.style.width = "200px";
-    card.style.height = "250px";
+    card.style.height = "220px";
 
     // Agregar el atributo drag a la card
     card.addEventListener("dragstart", drag);
@@ -67,27 +70,40 @@ function crearTarea() {
     eliminarBtn.setAttribute("data-toggle", "modal");
     eliminarBtn.setAttribute("data-target", "#eliminar-modal");
     eliminarBtn.style.backgroundColor= "#40798C";
-    eliminarBtn.style.marginRight= "0";
+    eliminarBtn.style.marginLeft= "10";
 
 
-    // agregar evento al botón de eliminar
     eliminarBtn.addEventListener("click", function() {
         // Obtener el modal de confirmación
         let modal = document.getElementById("eliminar-modal");
-
+      
         // Añadir el evento "click" al botón "Eliminar" del modal
         let confirmarEliminarBtn = modal.querySelector(".btn-danger");
-        confirmarEliminarBtn.addEventListener("click", function() {
-            card.remove();
-            $(modal).modal("hide");
-        });
-
+        
+        // Crear función para eliminar la card
+        function eliminarCard() {
+          card.remove();
+          $(modal).modal("hide");
+          confirmarEliminarBtn.removeEventListener("click", eliminarCard);
+        }
+      
+        // Agregar evento a botón "Eliminar" del modal
+        confirmarEliminarBtn.addEventListener("click", eliminarCard);
+        
         // Mostrar el modal de confirmación
         $(modal).modal("show");
-    });    
+      });
+
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
- 
+    checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          card.style.backgroundColor = "#6fba43";
+        } else {
+          card.style.backgroundColor = prioridad;
+        }
+      });
+      
 
     cardFooter.appendChild(checkbox);
 
@@ -107,8 +123,9 @@ function crearTarea() {
 
   
     // añadir card al container de tareas
-    const container = document.getElementById("container-tareas");
+    const container = document.getElementById(contenedorSeleccionado);
     container.appendChild(card);
+    
 
   
   
